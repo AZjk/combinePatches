@@ -23,10 +23,15 @@ A package that combines images obtained with an area detector at different posit
 * Documentation: https://combinepatches.readthedocs.io.
 
 
-Features
+Usage
 --------
+.. code-block:: python
+    
+    images = [np.ones((100, 100)) for _ in range(100)]
+    pixel_size = 75E-3  # typical pixel size for Eiger detectors 75um
+    positions = list(np.random.randint(-10, 10, size=(100, 2)) * pixel_size)
+    a = combine_patches(images, positions, pixel_size)
 
-* TODO
 
 Credits
 -------
